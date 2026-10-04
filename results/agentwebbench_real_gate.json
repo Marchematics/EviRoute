@@ -1,0 +1,29 @@
+{
+  "benchmark": "AgentWebBench web_search",
+  "data": "354 real queries; 80 observed gold source domains; canonical 100-site descriptions",
+  "protocol": "20 deterministic random seeds. Pair distinct-source real queries into 177 two-facet composite queries per seed. Gold set is the pair of original source domains. Route budget B=5.",
+  "note": "The pair construction is a controlled compositional stress test over real AgentWebBench queries; it is not an original benchmark task.",
+  "metrics": {
+    "joint_relevance": {
+      "source_recall": 0.3443502825,
+      "full_coverage": 0.113559322,
+      "traffic_gini": 0.6166723164
+    },
+    "facet_greedy_marginal_evidence": {
+      "source_recall": 0.3906779661,
+      "full_coverage": 0.1451977401,
+      "traffic_gini": 0.857479096
+    },
+    "facet_assignment": {
+      "source_recall": 0.3501412429,
+      "full_coverage": 0.1172316384,
+      "traffic_gini": 0.6399819209
+    }
+  },
+  "failed_balancing_attempts": [
+    "global/sequential traffic-price penalties: Gini falls sharply but source recall collapses",
+    "least-traffic near-tie selection: same collapse",
+    "hybrid evidence-first then balanced fill: no configuration simultaneously beat joint relevance in recall and Gini"
+  ],
+  "conclusion": "Marginal-evidence routing improves evidence/source coverage but amplifies site concentration. The current EviRoute formulation fails its intended joint quality/ecosystem gate."
+}
