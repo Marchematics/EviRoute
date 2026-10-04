@@ -1,0 +1,34 @@
+{
+  "experiment": "synthetic decentralized evidence-routing stress test",
+  "claim_scope": "mechanism-only; not AgentWebBench SOTA",
+  "multiquery_mean": {
+    "EviRoute": {
+      "world": 1.5,
+      "evidence_recall": 0.98669,
+      "traffic_gini": 0.53699,
+      "top10_traffic_share": 0.395312,
+      "sites_visited": 92.25
+    },
+    "ExactGreedy": {
+      "world": 1.5,
+      "evidence_recall": 0.997338,
+      "traffic_gini": 0.590792,
+      "top10_traffic_share": 0.429167,
+      "sites_visited": 85.0
+    },
+    "MMR": {
+      "world": 1.5,
+      "evidence_recall": 0.800231,
+      "traffic_gini": 0.86376,
+      "top10_traffic_share": 0.730729,
+      "sites_visited": 15.0
+    },
+    "TopRel": {
+      "world": 1.5,
+      "evidence_recall": 0.798495,
+      "traffic_gini": 0.863906,
+      "top10_traffic_share": 0.729167,
+      "sites_visited": 15.0
+    }
+  }
+}
