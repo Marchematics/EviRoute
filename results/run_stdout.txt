@@ -1,0 +1,6 @@
+             world  evidence_recall  traffic_gini  top10_traffic_share  sites_visited
+method                                                                               
+EviRoute       1.5         0.986690      0.536990             0.395313          92.25
+ExactGreedy    1.5         0.997338      0.590792             0.429167          85.00
+MMR            1.5         0.800231      0.863760             0.730729          15.00
+TopRel         1.5         0.798495      0.863906             0.729167          15.00
